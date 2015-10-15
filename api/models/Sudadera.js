@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
   	talla: {
   		type: 'string',
-  		enum: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']
+  		enum: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL'],
   		required: true
   	},
   	color: {

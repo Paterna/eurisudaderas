@@ -27,7 +27,7 @@ module.exports = {
   		}
   	},
   	sudadera: {
-  		model: sudadera,
+  		model: 'sudadera',
   		required: true
   	}
   }

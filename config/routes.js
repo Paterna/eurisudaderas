@@ -34,7 +34,9 @@ module.exports.routes = {
 
   '/': {
     view: 'index'
-  }
+  },
+
+  'get /api/form-data': 'SudaderaController.getData'
 
   /***************************************************************************
   *                                                                          *

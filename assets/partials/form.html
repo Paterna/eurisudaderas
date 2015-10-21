@@ -12,22 +12,19 @@
 		<div class="form-group">
 			<label for="design">Diseño</label>
 			<select class="form-control" id="design">
-				<option>Diseño 1 con capucha</option>
-				<option>Diseño 1 sin capucha</option>
-				<option>Diseño 2 con capucha</option>
-				<option>Diseño 2 sin capucha</option>
+				<option ng-repeat="d in disenos">{{ d }}</option>
 			</select>
 		</div>
 		<div class="form-group">
 			<label for="talla">Talla</label>
 			<select class="form-control" id="talla">
-				<option>XS</option>
+				<option ng-repeat="t in tallas">{{ t }}</option>
 			</select>
 		</div>
 		<div class="form-group">
 			<label for="color">Color</label>
 			<select class="form-control" id="color">
-				<option>XS</option>
+				<option ng-repeat="c in colores">{{ c }}</option>
 			</select>
 		</div>
 		<button type="submit" class="btn btn-default pull-right">Enviar</button>

@@ -1,5 +1,5 @@
 var app = angular.module('app', [
-	'ui-router'
+	'ui.router'
 ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',

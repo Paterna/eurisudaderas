@@ -13,6 +13,13 @@ module.exports = {
 	 	var tallas = Sudadera.attributes.tallas.enum;
 	 	var colores = Sudadera.attributes.colores.enum;
 	 	var disenos = Sudadera.attributes.disenos.enum;
+
+	 	try {
+	 		return res.api_ok({tallas: tallas, colores: colores, disenos: disenos});
+	 	}
+	 	catch (err) {
+	 		return res.api_error({code: 1, message: err});
+	 	}
 	 }
 };
 

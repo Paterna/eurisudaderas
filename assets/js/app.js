@@ -58,6 +58,28 @@ app.controller('formCtrl', ['$scope', '$state', '$http',
 		})
 		.catch(function (err) {
 			sweetAlert('Error!', err.message, 'error');
-		})
+		});
+
+        $scope.order = function (nombre, email, diseno, talla, color) {
+            $http.post('/api/order', {
+                nombre: nombre,
+                email: email,
+                talla: talla,
+                color: color,
+                diseno: diseno
+            })
+            .then(function (order) {
+                console.log("Pedido:", order);
+                swal({
+                    title: '¡Bien!',
+                    text: 'Pedido realizado con éxito.',
+                    type: 'success',
+                    confirmButton: 'Continuar'
+                }, function () {
+                    $state.go('home');
+                });
+            })
+            .catch();
+        }
 	}
 ]);

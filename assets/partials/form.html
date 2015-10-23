@@ -1,32 +1,29 @@
 <div id="wrapper" class="col-sm-12 col-md-4 col-md-offset-4">
-	<h1 class="text-center">Sudaderas ETSIT</h1>
-	<form>
+	<form id="order-form">
+		<h1 class="text-center">Sudaderas ETSIT</h1>
 		<div class="form-group">
 			<label for="nombre">Nombre completo</label>
-			<input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre completo">
+			<input ng-model="nombre" novalidate type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre completo">
 		</div>
 		<div class="form-group">
 			<label for="email">Email</label>
-			<input type="text" class="form-control" id="email" placeholder="Escribe tu dirección de email">
+			<input ng-model="email" novalidate type="email" class="form-control" id="email" placeholder="Escribe tu dirección de email">
 		</div>
 		<div class="form-group">
-			<label for="design">Diseño</label>
-			<select class="form-control" id="design">
-				<option ng-repeat="d in disenos">{{ d }}</option>
+			<label for="diseno">Diseño</label>
+			<select ng-model="diseno" ng-options="d for d in disenos" class="form-control" id="diseno">
 			</select>
 		</div>
 		<div class="form-group">
 			<label for="talla">Talla</label>
-			<select class="form-control" id="talla">
-				<option ng-repeat="t in tallas">{{ t }}</option>
+			<select ng-model="talla" ng-options="t for t in tallas" class="form-control" id="talla">
 			</select>
 		</div>
 		<div class="form-group">
 			<label for="color">Color</label>
-			<select class="form-control" id="color">
-				<option ng-repeat="c in colores">{{ c }}</option>
+			<select ng-model="color" ng-options="c for c in colores" class="form-control" id="color">
 			</select>
 		</div>
-		<button type="submit" class="btn btn-default pull-right">Enviar</button>
+		<button ng-click="order(nombre, email, diseno, talla, color)" class="btn btn-default pull-right">Enviar</button>
 	</form>
 </div>

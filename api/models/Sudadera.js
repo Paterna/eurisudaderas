@@ -8,19 +8,19 @@
 module.exports = {
 
   attributes: {
-  	tallas: {
+  	talla: {
   		type: 'string',
   		enum: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL'],
   		required: true
   	},
-  	colores: {
+  	color: {
   		type: 'string',
   		enum: ['Gris-malva', 'Gris-vigoré', 'Marino', 'Marino-rojo', 'Blanco-náutico', 'Blanco-negro',
   			   'Rojo', 'Rojo-blanco', 'Negro-violeta', 'Negro', 'Náutico', 'Náutico-girasol', 'Rosa',
   			   'Celeste', 'Pistacho', 'Malva', 'Naranja', 'Girasol', 'Chocolate', 'Verde botella',
   			   'Billar', 'Verde flúor', 'Fucsia']
  	  },
-    disenos: {
+    diseno: {
       type: 'string',
       enum: ['Diseño 1 con capucha', 'Diseño 1 sin capucha',
              'Diseño 2 con capucha', 'Diseño 2 sin capucha']

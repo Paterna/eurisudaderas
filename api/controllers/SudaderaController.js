@@ -10,9 +10,9 @@ module.exports = {
 	 * Para obtener los datos visibles en el formulario de pedido de sudadera.
 	 */
 	 getData: function (req, res) {
-	 	var tallas = Sudadera.attributes.tallas.enum;
-	 	var colores = Sudadera.attributes.colores.enum;
-	 	var disenos = Sudadera.attributes.disenos.enum;
+	 	var tallas = Sudadera.attributes.talla.enum;
+	 	var colores = Sudadera.attributes.color.enum;
+	 	var disenos = Sudadera.attributes.diseno.enum;
 
 	 	try {
 	 		return res.api_ok({tallas: tallas, colores: colores, disenos: disenos});

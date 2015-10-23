@@ -36,7 +36,8 @@ module.exports.routes = {
     view: 'index'
   },
 
-  'get /api/form-data': 'SudaderaController.getData'
+  'get /api/form-data': 'SudaderaController.getData',
+  'post /api/order': 'PedidoController.order'
 
   /***************************************************************************
   *                                                                          *
